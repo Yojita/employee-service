@@ -27,6 +27,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return dtos;
 	}
 
+	@Override
+	public EmployeeDTO getEmpByEmpCode(String empCode) {
+		Employee employee = employeeRepository.findByEmpCode(empCode);
+		if (employee != null) {
+			return getDtoFromEntity(employee);
+		}
+		return null;
+	}
+
 	private EmployeeDTO getDtoFromEntity(Employee employee) {
 		EmployeeDTO dto = new EmployeeDTO();
 		dto.setFirstName(employee.getFirstaName());
