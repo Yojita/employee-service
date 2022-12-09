@@ -8,4 +8,5 @@ import com.abcl.emp.entity.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
+	Employee findByEmpCode(String empCode);
 }
