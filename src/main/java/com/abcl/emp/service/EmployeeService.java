@@ -7,4 +7,6 @@ import com.abcl.emp.dto.EmployeeDTO;
 public interface EmployeeService {
 
 	public List<EmployeeDTO> getAllEmployees();
+
+	public EmployeeDTO getEmpByEmpCode(String empCode);
 }
