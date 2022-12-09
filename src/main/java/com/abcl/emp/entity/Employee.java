@@ -7,13 +7,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
 @Entity
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long empId;
-	private String firstaName;
+	private String firstName;
 	private String lastName;
 	private String empCode;
 	private Long deptId;
@@ -28,11 +27,11 @@ public class Employee {
 	}
 
 	public String getFirstaName() {
-		return firstaName;
+		return firstName;
 	}
 
 	public void setFirstaName(String firstaName) {
-		this.firstaName = firstaName;
+		this.firstName = firstaName;
 	}
 
 	public String getLastName() {
@@ -69,7 +68,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", firstaName=" + firstaName + ", lastName=" + lastName + ", empCode="
+		return "Employee [empId=" + empId + ", firstaName=" + firstName + ", lastName=" + lastName + ", empCode="
 				+ empCode + ", deptId=" + deptId + ", birthDate=" + birthDate + "]";
 	}
 
