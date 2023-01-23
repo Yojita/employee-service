@@ -12,6 +12,8 @@ public class EmployeeDTO {
 
 	private LocalDate birthDate;
 
+	private String deptCode;
+
 	public String getEmpCode() {
 		return empCode;
 	}
@@ -42,6 +44,14 @@ public class EmployeeDTO {
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public String getDeptCode() {
+		return deptCode;
+	}
+
+	public void setDeptCode(String deptCode) {
+		this.deptCode = deptCode;
 	}
 
 	@Override
